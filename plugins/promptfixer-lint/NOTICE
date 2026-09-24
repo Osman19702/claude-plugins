@@ -1,0 +1,47 @@
+promptfixer-lint
+Copyright (c) 2026 Osman Turalioglu
+Licensed under the MIT License (see LICENSE).
+
+Vendored code
+-------------
+
+Two files in this plugin are copied verbatim from the PromptFixer project
+(https://github.com/Osman19702/PromptFixer), MIT, Copyright (c) 2026 Osman
+Turalioglu. Same author, same licence; they are vendored so the plugin runs
+standalone with no install, no network and no dependency on a PromptFixer
+checkout.
+
+  plugin file                    upstream path in PromptFixer
+  -----------------------------  ------------------------------
+  scripts/analyze.js             server/analyze.js
+  scripts/promptfixer-lint.js    scripts/lint-prompts.js
+
+Vendored 2026-09-24 from PromptFixer 0.3.0.
+
+scripts/promptfixer-lint.js carries exactly three modifications, all of them
+consequences of the rename. One makes the renamed sibling resolve:
+
+  -  import { analyzePrompt } from '../server/analyze.js'
+  +  import { analyzePrompt } from './analyze.js'
+
+The other two are usage text, in the header comment and in the USAGE
+constant, so that --help names the file the user actually runs:
+
+  -  node scripts/lint-prompts.js <path...> ...
+  +  node scripts/promptfixer-lint.js <path...> ...
+
+No logic differs. scripts/analyze.js is byte-identical to its upstream
+original. Neither file was reformatted.
+
+scripts/package.json is not vendored. It exists only to mark these two files
+as ES modules when the plugin is installed outside a Node package.
+
+Checking for drift
+------------------
+
+  node scripts/check-vendored.mjs [path-to-PromptFixer-checkout]
+
+It compares both files against upstream, allows only the three enumerated
+differences above, and exits 0 in sync, 1 on drift, 2 when a file it needs is
+missing. The upstream root defaults to $PROMPTFIXER_DIR, else a PromptFixer
+checkout beside this repository.

@@ -1,0 +1,67 @@
+{
+  "name": "osman-plugins",
+  "description": "Free Claude Code plugins by Osman Turalioglu: visual UI change detection and offline prompt linting.",
+  "owner": {
+    "name": "Osman Turalioglu",
+    "url": "https://github.com/Osman19702"
+  },
+  "plugins": [
+    {
+      "name": "elastishot",
+      "source": "./plugins/elastishot",
+      "displayName": "Elastishot",
+      "description": "Compare two screenshots or two page URLs and get back the regions and DOM locators that changed, even when the layout shifted, zoomed or collapsed. Also runs config-driven visual regression baselines across targets and viewports, with a JUnit CI gate. Wraps the elastishot CLI from npm.",
+      "author": {
+        "name": "Osman Turalioglu",
+        "url": "https://github.com/Osman19702"
+      },
+      "homepage": "https://github.com/Osman19702/claude-plugins/tree/HEAD/plugins/elastishot",
+      "repository": "https://github.com/Osman19702/claude-plugins",
+      "license": "MIT",
+      "category": "testing",
+      "keywords": [
+        "visual-regression",
+        "screenshot",
+        "diff",
+        "image-comparison",
+        "ui-testing",
+        "playwright",
+        "ci"
+      ],
+      "tags": [
+        "visual-testing",
+        "screenshots",
+        "playwright",
+        "ci"
+      ]
+    },
+    {
+      "name": "promptfixer-lint",
+      "source": "./plugins/promptfixer-lint",
+      "displayName": "PromptFixer Lint",
+      "description": "Offline prompt linter. Scores a prompt file 0-100 across clarity, specificity, context, format and structure, and lists each defect with a severity and a fix. Deterministic regex rules only: no model, no network, no API key, no install.",
+      "author": {
+        "name": "Osman Turalioglu",
+        "url": "https://github.com/Osman19702"
+      },
+      "homepage": "https://github.com/Osman19702/claude-plugins/tree/HEAD/plugins/promptfixer-lint",
+      "repository": "https://github.com/Osman19702/claude-plugins",
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "prompt-engineering",
+        "linter",
+        "prompt-quality",
+        "static-analysis",
+        "ci",
+        "offline"
+      ],
+      "tags": [
+        "prompts",
+        "linting",
+        "ci",
+        "offline"
+      ]
+    }
+  ]
+}

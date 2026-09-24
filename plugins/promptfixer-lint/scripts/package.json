@@ -1,0 +1,6 @@
+{
+  "name": "promptfixer-lint-vendored",
+  "private": true,
+  "type": "module",
+  "description": "Marks the vendored linter files as ES modules. No dependencies: analyze.js imports nothing and promptfixer-lint.js imports only node:fs, node:path and ./analyze.js."
+}

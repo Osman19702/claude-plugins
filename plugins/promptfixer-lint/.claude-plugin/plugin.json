@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "promptfixer-lint",
+  "displayName": "PromptFixer Lint",
+  "description": "Offline prompt linter. Scores a prompt file 0-100 across clarity, specificity, context, format and structure, and lists each defect with a severity and a fix. Deterministic regex rules only: no model, no network, no API key, no install.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Osman Turalioglu",
+    "url": "https://github.com/Osman19702"
+  },
+  "homepage": "https://github.com/Osman19702/claude-plugins/tree/HEAD/plugins/promptfixer-lint",
+  "repository": "https://github.com/Osman19702/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "prompt-engineering",
+    "linter",
+    "prompt-quality",
+    "static-analysis",
+    "ci",
+    "offline"
+  ]
+}
