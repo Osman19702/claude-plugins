@@ -23,7 +23,7 @@ Each plugin's own README covers usage, prerequisites and the failure paths.
 
 The plugins are thin, versioned wrappers; the tools they drive live in their own repositories.
 
-- **elastishot** is published on npm, so the plugin vendors no code — its skills invoke `npx elastishot@^0.2.0`. Source: [Osman19702/elastishot](https://github.com/Osman19702/elastishot). The plugin itself lives in its own repository, [Osman19702/elastishot-claude-plugin](https://github.com/Osman19702/elastishot-claude-plugin); this marketplace references it as a `github` source rather than carrying a copy.
+- **elastishot** is published on npm, so the plugin vendors no code — its skills invoke `npx elastishot@^0.2.0`. Source: [Osman19702/elastishot](https://github.com/Osman19702/elastishot). The plugin itself lives in its own repository, [Osman19702/elastishot-claude-plugin](https://github.com/Osman19702/elastishot-claude-plugin); this marketplace references it by its HTTPS clone URL (a `url` source) rather than carrying a copy.
 - **promptfixer-lint** ships the deterministic linter out of [Osman19702/PromptFixer](https://github.com/Osman19702/PromptFixer) — two dependency-free files, vendored verbatim so the plugin runs standalone. The desktop app, its bundled local model and its cloud providers are **not** part of this plugin. Attribution is in [NOTICE](plugins/promptfixer-lint/NOTICE); `scripts/check-vendored.mjs` fails on any drift from upstream beyond three enumerated rename edits.
 
 ## Developing
